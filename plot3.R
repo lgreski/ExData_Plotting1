@@ -6,12 +6,12 @@
 # Revision history: revisions tracked on github.com
 # 
 # Purpose:  Produce multi line chart of Sub metering 1 - 3 with legend
-#    
+# 
+
+
 # check to see whether power consumption zip file exists on disk. If it is not present,
 # download and unzip
-
-
-if(!file.exists("power_consumption.zip")){
+if(!file.exists("household_power_consumption.txt")){
      # since download.file is OS specific, check the OS and either set to wininet for windows
      # or curl for everything else
      dlMethod <- "curl"
