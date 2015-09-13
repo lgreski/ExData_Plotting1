@@ -10,9 +10,14 @@
 # check to see whether power consumption zip file exists on disk. If it is not present,
 # download and unzip
 
-if(!file.exists("power_consumption.zip")){
+if(!file.exists("household_power_consumption.txt")){
+     # since download.file is OS specific, check the OS and either set to wininet for windows
+     # or curl for everything else
+     dlMethod <- "curl"
+     if(substr(Sys.getenv("OS"),1,7) == "Windows") dlMethod <- "wininet"
+     # now download the file
      url <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
-     download.file(url,destfile='power_consumption.zip',method="curl",mode="wb")
+     download.file(url,destfile='power_consumption.zip',method=dlMethod,mode="wb")
      unzip(zipfile = "power_consumption.zip")    
 }
 
