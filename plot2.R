@@ -32,7 +32,7 @@ theSubset$dateTime <- strptime(paste(theSubset$Date,theSubset$Time),
                                format="%d/%m/%Y %H:%M:%S")
 
 # plot 2: line chart 
-thePngFile <- png(file="plot2.png",width=480,height=480,units = "px")
+thePngFile <- png(file="plot2.png",width=480,height=480,units = "px",bg = "white")
 with(theSubset, plot(dateTime, Global_active_power,type = "n",
                      ylab="Global Active Power (kilowatts)",
                      xlab=" "))

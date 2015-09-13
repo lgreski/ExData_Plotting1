@@ -37,7 +37,7 @@ theSubset$dateTime <- strptime(paste(theSubset$Date,theSubset$Time),
 
 # plot 4: multiple charts to the page
 # set up rows and cols
-thePngFile <- png(file="plot4.png",width=480,height=480,units = "px")
+thePngFile <- png(file="plot4.png",width=480,height=480,units = "px", bg = "white")
 
 # important to set the mfrow parameter AFTER directing output to PNG file, or new
 # device saves only the last chart 

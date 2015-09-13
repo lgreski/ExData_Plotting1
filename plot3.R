@@ -40,7 +40,7 @@ theSubset$dateTime <- strptime(paste(theSubset$Date,theSubset$Time),
                                format="%d/%m/%Y %H:%M:%S")
 
 # plot 3: submetering combined line chart
-thePngFile <- png(file="plot3.png",width=480,height=480,units = "px")
+thePngFile <- png(file="plot3.png",width=480,height=480,units = "px",bg="white")
 with(theSubset,plot(dateTime,Sub_metering_1, type = "n",
                     ylab = "Energy sub metering",
                     xlab = " "))
